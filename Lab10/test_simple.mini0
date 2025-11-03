@@ -1,0 +1,5 @@
+fun main(): int
+    x: int
+    x = 10 + 20
+    return x
+end

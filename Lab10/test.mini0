@@ -1,0 +1,52 @@
+// Programa de prueba para el analizador léxico de Mini-0
+
+/* Comentario
+   multilínea */
+
+fun factorial(n: int): int
+    if n <= 1
+        return 1
+    else
+        return n * factorial(n - 1)
+    end
+end
+
+fun main(): int
+    // Declaración de variables
+    x: int
+    y: bool
+    mensaje: string
+    numeros: []int
+    
+    // Asignaciones
+    x = 42
+    y = true and false or not true
+    mensaje = "Hola\nmundo\t\"escapado\"\\"
+    
+    // Números hexadecimales
+    hex1: int
+    hex2: int
+    hex1 = 0xFF
+    hex2 = 0xDEADBEEF
+    
+    // Operadores relacionales
+    if x > 10 and x <= 100
+        y = x >= 50 or x < 25
+    else if x <> 0
+        y = false
+    end
+    
+    // Bucle while
+    i: int
+    i = 0
+    while i < 10
+        numeros = new [10] int
+        numeros[i] = factorial(i)
+        i = i + 1
+    loop
+    
+    // Caracteres especiales para probar errores
+    @ # $ % ^
+    
+    return 0
+end
